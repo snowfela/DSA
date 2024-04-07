@@ -54,7 +54,7 @@ void insertBetween(int value, int loc1, int loc2){
 }
 void removeBeginning(){
    if(head == NULL)
-	printf("\n\nList is Empty!!!");
+	printf("List is Empty\n");
    else{
       struct Node *temp = head;
       if(head->next == NULL){
@@ -64,13 +64,13 @@ void removeBeginning(){
       else{
 	head = temp->next;
 	free(temp);
-	printf("\nOne node deleted!!!\n\n");
+	printf("One node deleted!!!\n");
       }
    }
 }
 void removeEnd(){
    if(head == NULL)
-      printf("\nList is Empty!!!\n");
+      printf("List is Empty!\n");
    else{
       struct Node *temp1 = head,*temp2;
       if(head->next == NULL)
@@ -103,10 +103,10 @@ void removeSpecific(int delValue){
 }
 void display(){
    if(head == NULL)
-      printf("\nList is Empty\n");
+      printf("List is Empty\n");
    else{
       struct Node *temp = head;
-      printf("\n\nList elements: ");
+      printf("List elements: ");
       while(temp->next != NULL){
 	 printf("%d ---> ",temp->data);
 	 temp = temp->next;
@@ -131,11 +131,11 @@ void main(){
 				break;
 		   case 2: 	insertAtEnd(value);
 				break;
-		   case 3:  printf("Enter the two values where you wanto insert: ");
+		   case 3:  	printf("Enter the two values where you wanto insert: ");
 				scanf("%d%d",&loc1,&loc2);
 				insertBetween(value,loc1,loc2);
 				break;
-		   default: printf("Wrong Input!! \n");
+		   default: 	printf("Wrong Input \n");
 				break;
 		}}break;
       case 2: 	display(); break;
@@ -146,14 +146,14 @@ void main(){
 				break;
 		    case 2: 	removeEnd();
 				break;
-		    case 3:      printf("Enter the value which you wanto delete: ");
+		    case 3:     printf("Enter the value which you wanto delete: ");
 				scanf("%d",&loc2);
 				removeSpecific(loc2);
 				break;
-		    default: 	printf("\nWrong Input!!\n");
-            break;
+		    default: 	printf("Wrong Input \n");
+            			break;
 		}
       case 4: 	exit(0);
-      default: printf("\nWrong input!!\n");
+      default: 	printf("\nWrong input!!\n");
    }} 
 }
